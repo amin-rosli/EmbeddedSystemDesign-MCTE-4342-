@@ -1,5 +1,6 @@
-class Counter {
-public:
+class Counter { //initialize class BLinkz
+                //initialize variables
+public:                                                 
 
   int pin;
   int pinB;
@@ -9,12 +10,13 @@ public:
   unsigned char *read;
   char port;
 
-  Counter(int pin, char port) {
-    port = port;
-    pinB = pow(2, pin) + 0.5;
+  Counter(int pin, char port) {                           //initialize default constructor (port letter,pin number,on duration,off duration)
+    
+    port = port;                                          
+    pinB = pow(2, pin) + 0.5;                             //converts pin from DEC to BIN
 
     switch (port) {
-      case 'B': read = (unsigned char *)0x23; break;
+      case 'B': read = (unsigned char *)0x23; break;      //converts port letter to point address to read
       case 'C': read = (unsigned char *)0x26; break;
       case 'D': read = (unsigned char *)0x29; break;
     }
@@ -26,7 +28,7 @@ Counter button[] = { Counter(0, 'B'), Counter(1, 'B'), Counter(2, 'B'), Counter(
 unsigned long debounce = 20;                                                                                 //debounce duration (ms)
 
 
-int button_num = (sizeof(button) / sizeof(button[0]));
+int button_num = (sizeof(button) / sizeof(button[0]));    //calculate the number of buttons initialized
 unsigned char *read = (unsigned char *)0x23;
 unsigned char *dir = (unsigned char *)0x24;
 unsigned char *write = (unsigned char *)0x25;
@@ -41,15 +43,12 @@ void setup() {
 void loop() {
 
 
-  for (int a = 0; a < button_num; a++) {
+  for (int a = 0; a < button_num; a++) {      //loops according to number of buttons
 
-    unsigned long current_time = millis();
-    int current = (((*read) & button[a].pinB) == 0);
+    unsigned long current_time = millis();    //update current_time
+    int current = (((*read) & button[a].pinB) == 0);    //checks if button is pushed or not returning to current
 
-    if (current_time - button[a].prev_time > debounce) {
-
-      // assign current to check if *read and dpin 8 is pressed
-
+    if (current_time - button[a].prev_time > debounce) {    //if time passed since last pushed was more than debounce duration
 
       if (current && !button[a].last_state) {  // checks if current and prev is not the same
         button[a].count += 1;                  // increases count value
@@ -59,7 +58,7 @@ void loop() {
     }
   }
 
-  for (int b = 0; b < button_num; b++) {
+  for (int b = 0; b < button_num; b++) {    //prints the number of button presses according to button number
     Serial.print("Button ");
     Serial.print(b + 1);
     Serial.print(" = ");
