@@ -10,8 +10,8 @@ void setup() {
   Serial.begin(9600);
   
 
-  *dir = 0b00000000;   //or *dir = 32 or *dir = 0x20
-  *write = 0b11111111;
+  *dir = 0b00000000;   //assigns ddr as OUTPUT
+  *write = 0b11111111; //assigns as HIGH for all ports (INPUT_PULLUP)
 }
 
 void loop() {
