@@ -19,8 +19,8 @@ void setup() {
 }
 
 void loop() {
-  counter();
-  led();
+  counter(); //executes counter function
+  led();     //executes led function
 }
 
 void counter() {
@@ -38,16 +38,16 @@ void counter() {
 
 void led() {
 
-  unsigned long curr_time = millis();
-  if (((*Bread) & 0b0000010) == 0) {
-    if (curr_time - prev_time > 2000) {
-      *Bwrite |= 0b00000010;
-      prev_time = curr_time;
+  unsigned long curr_time = millis();     //updates current time
+  if (((*Bread) & 0b0000010) == 0) {      //checks if *Bread and PB=LOW (checks if LED is off)
+    if (curr_time - prev_time > 2000) {   //checks if last time LED was off is more than 2secs
+      *Bwrite |= 0b00000010;              //mask the PB1 as high (turns on LED)
+      prev_time = curr_time;              //update the prev_time as curr_time
     }
-  } else {
-    if (curr_time - prev_time > 2000) {
-      *Bwrite &= 0b11111101;
-      prev_time = curr_time;
+  } else {                                //if LED is on
+    if (curr_time - prev_time > 2000) {   //checks last time LED was on is more than 2secs
+      *Bwrite &= 0b11111101;              //mask the PB1 as low (turns off LED)
+      prev_time = curr_time;              //update the prev_time as curr_time
     }
   }
   
