@@ -1,5 +1,5 @@
-class Blinkz {
-  char port;
+class Blinkz {                //initialize class BLinkz
+  char port;                  //initialize variables
   int pin;
   int pinB;
   int on_time;
@@ -9,16 +9,16 @@ class Blinkz {
 
 
 public:
-  Blinkz(char port, int pin, int c, int d) {
+  Blinkz(char port, int pin, int c, int d) {            //initialize default constructor (port letter,pin number,on duration,off duration)
     port = port;
     pin = pin;
     on_time = c;
     off_time = d;
     prev_time = 0;
 
-    pinB = pow(2, pin);
+    pinB = pow(2, pin);                                 //converts pin from DEC to BIN
 
-    switch (port) {
+    switch (port) {                                     //converts port letter to point address to write
       case 'B': write = (unsigned char *)0x25; break;
       case 'C': write = (unsigned char *)0x28; break;
       case 'D': write = (unsigned char *)0x2b; break;
@@ -27,11 +27,9 @@ public:
   }
 
   void flash() {
-    unsigned long curr_time = millis();
+    unsigned long curr_time = millis();                 //initialize and updates curr_time
 
-    Serial.println(pinB);
-
-    if (((*write) & pinB) == 0) {
+    if (((*write) & pinB) == 0) {                       //checks if LED is off
       if (curr_time - prev_time >= on_time) {
         *write |= pinB;
         prev_time = curr_time;
