@@ -29,21 +29,21 @@ public:
   void flash() {
     unsigned long curr_time = millis();                 //initialize and updates curr_time
 
-    if (((*write) & pinB) == 0) {                       //checks if LED is off
-      if (curr_time - prev_time >= on_time) {
-        *write |= pinB;
-        prev_time = curr_time;
+    if (((*write) & pinB) == 0) {                       //checks if LED is OFF
+      if (curr_time - prev_time >= off_time) {          //checks if last time LED was OFF is more than off_time
+        *write |= pinB;                                 //mask the pin binary as HIGH (turns on LED)
+        prev_time = curr_time;                          //update the prev_time as curr_time
       }
-    } else {
-      if (curr_time - prev_time >= off_time) {
-        *write &= ~pinB;
-        prev_time = curr_time;
+    } else {                                            //if LED is ON
+      if (curr_time - prev_time >= on_time) {           //checks if last time LED was ON is more than off_time
+        *write &= ~pinB;                                //mask the pin binary as LOW (turns off LED)
+        prev_time = curr_time;                          //update the prev_time as curr_time
       }
     }
   }
 };
 
-Blinkz yellowLed('B', 0, 750, 350);
+Blinkz yellowLed('B', 0, 750, 350);                     //insert variables to be constructed
 Blinkz redLed('B', 1, 400, 600);
 
 void setup() {
@@ -51,6 +51,6 @@ void setup() {
 }
 
 void loop() {
-  yellowLed.flash();
+  yellowLed.flash();                                    //executes the flash function
   redLed.flash();
 }
