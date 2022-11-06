@@ -13,5 +13,6 @@ Video: https://drive.google.com/file/d/1Z5ZH8TbYqIu81Sk7BkpNkka_Kbzhaini/view?us
 
 ### piano_with_adjustable_pitch
 Piano with 5 keys that correspond to different notes. The pitch of the piano can be adjusted by turning the potentiometer.
+5 pitches are made available.
 
 Video: https://drive.google.com/file/d/1wZt8_IGWKMddTuf2uDXUUG-dCFM71TBQ/view?usp=share_link
