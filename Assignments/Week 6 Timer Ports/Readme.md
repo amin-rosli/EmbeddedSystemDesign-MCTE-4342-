@@ -1,7 +1,7 @@
 ## Week 6 Timer Ports
 
 ### emulated_pwm
-A pwm signal is emulated using software by outputting the emulated pwm to a digital pin.
+A pwm signal is emulated using software by outputting the emulated pwm to a digital pin 7.
 
 Video: https://drive.google.com/file/d/1rZtp6VBJc8mJt76BWx7BbJi63--hr7pO/view?usp=sharing
 
