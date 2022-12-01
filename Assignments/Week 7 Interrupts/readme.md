@@ -24,7 +24,7 @@ This experiment tries to replicate the use of a hardware interrupt in a machine 
 to 0,0), the machine will simply move the motor to the beginning. However, the position of
 the motor in the software sometimes do not reflect its actual position exactly. These minor
 inaccuracies may cause the motor to be retracted too much or too little that could lead to
-the machine not functioning optimally or do damage to the machine. As such, a limit switch
+the machine not functioning optimally or cause damage to the machine. As such, a limit switch
 is placed at the end of the machine to detect when the motor reaches at the end. Interrupts
 are used as the processor is required to run commands to move the motor but also look out
 for the singal from the limit switches. Once the limit switch is activated, the motor stops
