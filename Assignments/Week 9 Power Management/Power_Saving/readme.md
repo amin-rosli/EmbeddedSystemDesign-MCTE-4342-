@@ -6,6 +6,8 @@ To measure the power consumption, Watt's law is used:
 
 P = I * V
 where : P = Power consumption (W) , I = Current (A) , V = Potential difference (V) 
+![Screenshot 2022-12-31 194126](https://user-images.githubusercontent.com/116183995/210135401-8d41a5eb-fdb1-4a07-884e-8d4c48dea51f.jpg)
+
 
 ## Battery Voltage
 ![20221231_190838](https://user-images.githubusercontent.com/116183995/210134554-3cd494b7-47a1-40c1-8687-082593425a9e.jpg)
