@@ -25,7 +25,7 @@ Because this program uses the EEPROM, the position saved in each profile is stil
 
 https://user-images.githubusercontent.com/116183995/210133961-5c45e876-564d-484b-bbde-482915ae0961.mp4
 
-## Distance
+# Distance
 
 An ultrasonic sensor is connected to the Arduino and by using an SD card module, the readings obtained from the sensor will then be saved into an SD card to export the data.
 
