@@ -10,12 +10,12 @@ https://user-images.githubusercontent.com/116183995/210133764-cf66fb10-8236-429d
 
 This program consists of two main functions being, writer() and reader().
 
-#writer ():
+# writer ():
 The user pushes the in built button on the Arduino to initiate writing mode, the LED will light up to indicate that writing mode is initiated. 
 
 When the writing mode is initated, the user could use the potentiometer to change the position of the servo motor and press 1 of 3 buttons for saving that position.
 
-#reader ():
+# reader ():
 The user pushes the in built button on the Arduino to initiate reading mode, the LED will turn off to indicate that reading mode is initiated. 
 
 The user then pushes 1 of 3 buttons so that the program will read the position of the servo motor stored in each profile.
