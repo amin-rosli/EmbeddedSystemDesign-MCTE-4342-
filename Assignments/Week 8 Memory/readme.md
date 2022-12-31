@@ -1,4 +1,4 @@
-## Toggle LED
+# Toggle LED
 
 The toggle LED is program is a program that simply toggles an LED on and off. However, unlike normal programs that rely on the volatile memory of the microcontroller, this program uses non-volatile memory(EEPROM) instead. The advantage of using the EEPROM to store the state of the LED is that it stores the data even when power is lost to the device, meaning that is not volatile to power hence the name.
 
@@ -6,16 +6,16 @@ In the video, I reset the Arduino a couple of times but the LED still retains th
 
 https://user-images.githubusercontent.com/116183995/210133764-cf66fb10-8236-429d-b90a-215bbeb610a3.mp4
 
-## Servo position
+# Servo position
 
 This program consists of two main functions being, writer() and reader().
 
-# writer ():
+## writer ():
 The user pushes the in built button on the Arduino to initiate writing mode, the LED will light up to indicate that writing mode is initiated. 
 
 When the writing mode is initated, the user could use the potentiometer to change the position of the servo motor and press 1 of 3 buttons for saving that position.
 
-# reader ():
+## reader ():
 The user pushes the in built button on the Arduino to initiate reading mode, the LED will turn off to indicate that reading mode is initiated. 
 
 The user then pushes 1 of 3 buttons so that the program will read the position of the servo motor stored in each profile.
