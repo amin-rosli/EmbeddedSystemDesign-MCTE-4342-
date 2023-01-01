@@ -10,7 +10,7 @@ where : P = Power consumption (W) , I = Current (A) , V = Potential difference (
 
 
 ## Battery Voltage
-![20221231_190838](https://user-images.githubusercontent.com/116183995/210134554-3cd494b7-47a1-40c1-8687-082593425a9e.jpg)
+![battery_new](https://user-images.githubusercontent.com/116183995/210179098-12cda69c-6880-4285-84e5-f21646caab68.jpg)
 
 The battery voltage measured is 4.71 V
 
