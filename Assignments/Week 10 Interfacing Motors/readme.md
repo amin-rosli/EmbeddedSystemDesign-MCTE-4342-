@@ -15,7 +15,7 @@ Direction : 2 Buttons controls the direction of the DC motor being clockwise or 
 
 https://user-images.githubusercontent.com/116183995/210178668-8538a69a-1476-46ca-bb0c-b5d570573e68.mp4
 
-A slow motion video to make the direction change easier to see: 
+A slow motion video to make the direction change easier to see (WARNING: FLASHING LIGHTS): 
 
 https://user-images.githubusercontent.com/116183995/210178691-fd98f008-2209-4a19-b583-e620302a3700.mp4
 
