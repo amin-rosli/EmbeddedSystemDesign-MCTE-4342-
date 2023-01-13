@@ -42,3 +42,11 @@ This program steps the motor a specific amount of steps by reading the values gi
 The higher the voltage of the potentiometer, the higher the analog value will be which in turn increases the steps of the motor. The user then presses the button to move the motor to that specific steps.
 
 https://user-images.githubusercontent.com/116183995/212367028-b6ff0ead-7a94-46a4-913e-d558c9d9f2c5.mp4
+
+# Stepper motor interrupt
+
+As stated before, steppers motor are often used in applications where precision is of utmost importance such as a 3D printer or a CNC machine. But as the stepper motor is being used for extended periods of time, the stepper motor actual position may be out of sync from what the program thinks its position actually is which could be caused by a multitude of reasons such as signal interference between the motor driver and the stepper motor or collision with the workpiece. As such to make the motor be in sync with each other, most machines use a limit switch when homing to know the physical location of the motor and not damage any parts of the machine.
+
+This program uses 2 buttons, 1 for starting the motor to spin and the other one as a makeshift limit switch which is attached as interrupt. When the makeshift limit switch is activated, it will immediately stop the stepper motor from running.
+
+https://user-images.githubusercontent.com/116183995/212376538-2d85f036-c327-42e1-a2c8-24e40b2da654.mp4
